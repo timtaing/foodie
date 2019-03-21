@@ -1,0 +1,29 @@
+uuid: 91084aad-2645-43e1-b6f0-023df3682f5f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_restaurants
+    - node.type.restaurant
+    - taxonomy.vocabulary.restaurants
+id: node.restaurant.field_restaurants
+field_name: field_restaurants
+entity_type: node
+bundle: restaurant
+label: City
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      restaurants: restaurants
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

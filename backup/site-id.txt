@@ -1,0 +1,1 @@
+ando drush config-set "system.site" uuid "fe12da40-0662-404b-a289-b1188fb83303"

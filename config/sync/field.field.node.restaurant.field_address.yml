@@ -1,0 +1,21 @@
+uuid: ad3423c9-7930-422c-8e0f-11a9e943de32
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_address
+    - node.type.restaurant
+  module:
+    - text
+id: node.restaurant.field_address
+field_name: field_address
+entity_type: node
+bundle: restaurant
+label: Address
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text
