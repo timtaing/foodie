@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.teaser
     - field.storage.node.field_geolocation
     - node.type.restaurant
     - taxonomy.vocabulary.restaurants
@@ -111,14 +110,14 @@ display:
             zoom: '10'
             maxZoom: 18
             minZoom: 0
-            mapTypeControl: 1
-            streetViewControl: 1
+            mapTypeControl: 0
+            streetViewControl: 0
             zoomControl: 1
             rotateControl: 0
             fullscreenControl: 0
-            scrollwheel: 1
+            scrollwheel: 0
             gestureHandling: auto
-            draggable: 1
+            draggable: 0
             preferScrollingToZooming: 0
             disableDoubleClickZoom: 0
             style: ''
@@ -126,9 +125,13 @@ display:
             marker_icon_path: ''
             disableAutoPan: 1
       row:
-        type: 'entity:node'
+        type: fields
         options:
-          view_mode: teaser
+          default_field_elements: true
+          inline:
+            title: title
+          separator: ''
+          hide_empty: false
       fields:
         title:
           id: title
@@ -226,8 +229,36 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: ''
-          type: geolocation_latlng
-          settings: {  }
+          type: geolocation_map
+          settings:
+            set_marker: '0'
+            title: ''
+            info_text: ''
+            replacement_patterns:
+              token_geolocation:
+                token_items: ''
+            google_map_settings:
+              height: 400px
+              width: 100%
+              type: ROADMAP
+              zoom: '10'
+              maxZoom: 18
+              minZoom: 0
+              mapTypeControl: 0
+              streetViewControl: 0
+              zoomControl: 0
+              rotateControl: 0
+              fullscreenControl: 0
+              scrollwheel: 0
+              gestureHandling: auto
+              draggable: 0
+              preferScrollingToZooming: 0
+              disableDoubleClickZoom: 0
+              style: ''
+              info_auto_display: 0
+              marker_icon_path: ''
+              disableAutoPan: 0
+            use_overridden_map_settings: 0
           group_column: ''
           group_columns: {  }
           group_rows: true
@@ -347,6 +378,15 @@ display:
       display_extenders: {  }
       path: san-diego-restaurants
       display_description: ''
+      menu:
+        type: none
+        title: ''
+        description: ''
+        expanded: false
+        parent: ''
+        weight: 0
+        context: '0'
+        menu_name: main
     cache_metadata:
       max-age: -1
       contexts:
