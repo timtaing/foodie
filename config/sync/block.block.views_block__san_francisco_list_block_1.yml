@@ -1,0 +1,30 @@
+uuid: ecae3508-b67c-4a10-8d6d-61b6c31129d2
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.san_francisco_list
+  module:
+    - system
+    - views
+  theme:
+    - nexus
+id: views_block__san_francisco_list_block_1
+theme: nexus
+region: content
+weight: 0
+provider: null
+plugin: 'views_block:san_francisco_list-block_1'
+settings:
+  id: 'views_block:san_francisco_list-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: /san-francisco-restaurants
+    negate: false
+    context_mapping: {  }

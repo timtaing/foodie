@@ -1,0 +1,31 @@
+uuid: de99bafc-9ff2-4736-9451-6707570c215a
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.san_diego_list_
+  module:
+    - system
+    - views
+  theme:
+    - nexus
+id: views_block__san_diego_list__block_1
+theme: nexus
+region: content
+weight: -5
+provider: null
+plugin: 'views_block:san_diego_list_-block_1'
+settings:
+  id: 'views_block:san_diego_list_-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+  context_mapping: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: "/san-diego-restaurants\r\n"
+    negate: false
+    context_mapping: {  }
